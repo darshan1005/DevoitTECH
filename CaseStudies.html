@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/Devoit.png" type="image/png">
+    <link rel="stylesheet" href="CaseStudies.css">
+    <title>Case Studies</title>
+</head>
+<body>
+    <h1 style="padding-left: 10px;">Case Studies</h1>
+    <hr>
+    <!-- Case Study Cards -->
+    <div id="case-study-cards-panel">
+        <!-- Case study cards will be populated here using JavaScript -->
+    </div>
+
+    <script>
+        const caseStudiesData = [
+            { id: 1, name: 'Demo Case Study 1', description: 'Short description of Demo Case Study 1.' },
+            { id: 2, name: 'Demo Case Study 2', description: 'Short description of Demo Case Study 2.' },
+            { id: 3, name: 'Demo Case Study 3', description: 'Short description of Demo Case Study 3.' },
+            { id: 4, name: 'Demo Case Study 4', description: 'Short description of Demo Case Study 4.' },
+            { id: 5, name: 'Demo Case Study 5', description: 'Short description of Demo Case Study 5.' },
+            { id: 6, name: 'Demo Case Study 6', description: 'Short description of Demo Case Study 6.' },
+            { id: 7, name: 'Demo Case Study 7', description: 'Short description of Demo Case Study 7.' },
+            { id: 8, name: 'Demo Case Study 8', description: 'Short description of Demo Case Study 8.' },
+            { id: 9, name: 'Demo Case Study 9', description: 'Short description of Demo Case Study 9.' },
+        ];
+
+        function generateCaseStudyCards() {
+            const caseStudyCardsContainer = document.getElementById('case-study-cards-panel');
+            caseStudiesData.forEach(caseStudy => {
+                const card = document.createElement('div');
+                card.innerHTML = `
+                    <div class = "card-body">
+                      <h2>${caseStudy.name}</h2>
+                      <p>${caseStudy.description}</p>
+                    </div>
+                      <button onclick="redirectToDetailsPage(${caseStudy.id})">Read More</button>
+                `;
+                card.setAttribute('class', 'case-study-card');
+                caseStudyCardsContainer.appendChild(card);
+            });
+        }
+
+        function redirectToDetailsPage(caseStudyId) {
+            window.location.href = `caseStudyDetails.html?id=${caseStudyId}`;
+        }
+
+        window.onload = generateCaseStudyCards;
+    </script>
+</body>
+</html>

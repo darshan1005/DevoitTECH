@@ -1,0 +1,30 @@
+#case-study-details{
+  padding: 20px;
+}
+
+#case-study-details button{
+  padding: 10px 22px;
+  background: rgb(255, 193, 35);
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#case-study-details button:hover{
+  background: white;
+  transition: all .3s ease-in-out;
+}
+
+#case-study-details h2{
+  font-size: x-large;
+}
+
+#case-study-details h3{
+  color: rgba(0, 0, 0, 0.623);
+}
+
+#case-study-details p{
+  font-size: clamp(10px, 3vh, 30px);
+  background: #ffb7002f;
+  padding: 20px;
+}

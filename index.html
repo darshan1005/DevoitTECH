@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css"
+    integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="./assets/Devoit.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>DevoitConsulting</title>
+
+  <style>
+    .hidden {
+      opacity: 0;
+      transition: all 1s ease-in-out;
+    }
+
+    .fade-in {
+      opacity: 1;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    .fade-left {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+
+    .fade-right {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+
+    .fade-top {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+
+    .fade-bottom {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+
+    .visible {
+      transform: translate(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo" src="./assets/Devoit.png" alt="Devoit">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="CaseStudies.html" target="_blank">Case Studies</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- Hero -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="hero-left">
+        <div class="hero-left-content">
+          <p class="hero-left-title">
+            <span class="typing-text">
+              Communicate. Collaborate. Create.
+            </span>
+          </p>
+          <p class="hero-left-subtitle">Devoit Consulting Developments operations provides an effetive and powerful way
+            to manage your projects</p>
+          <a href="#emailus">
+            <button class="hero-left-btn" type="button">Get Started</button>
+          </a>
+        </div>
+        <div class="icon-content-flex">
+          <div class="icon-content">
+            <img class="icon-content-img-one" src="./assets/icon-01.png" alt="">
+            <p>Speed & Security</p>
+          </div>
+          <div class="icon-content">
+            <img src="./assets/icon-02.png" alt="">
+            <p>Flexibility & Scalability</p>
+          </div>
+          <div class="icon-content">
+            <img src="./assets/icon-03.png" alt="">
+            <p>Better Collaboration</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="./assets/Kids-building.png" alt="">
+      </div>
+    </div>
+  </section>
+<!-- About -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <p class="about-title hidden fade-top">About Us</p>
+      <div class="about-section-contents hidden fade-top">
+        <p class="content-one">With the Right Software, Great Things Can Happen</p>
+        <p class="content-two">
+          I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
+          click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like
+          on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+      </div>
+    </div>
+  </section>
+<!-- What We Offer -->
+  <section class="weOffer" id="services">
+    <div class="weOffer-head">
+      <h2 class="weOffer-head-title hidden fade-out">What We Offer</h2>
+      <p class="weOffer-head-subtitle hidden fade-out">I'm a paragraph. Click here to add your own text and edit me.
+        It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
+      </p>
+    </div>
+    <div class="weOffer-cards" id="weOfferCards"></div>
+  </section>
+<!-- Community -->
+  <section class="community">
+    <div class="community-contents">
+      <img class="community-img hidden fade-left" src="./assets/creative-community.png" alt="community">
+      <div class="communities-guide">
+        <h3 class="community-guide-title">Build for Creatives, by Creatives</h3>
+        <p class="community-guide-description">
+          I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
+          click me to add your own content and make changes to the font. I’m a great place for you to tell a story and
+          let your users know a little more about you.
+        </p>
+
+        <div class="community-guide-icons">
+          <div class="community-icon-content hidden fade-right">
+            <img src="./assets/icon-04.png" alt="">
+            <p>All-In-One Toolkit</p>
+          </div>
+          <div class="community-icon-content  hidden fade-right">
+            <img src="./assets/icon-05.png" alt="">
+            <p>Integrated File Sharing</p>
+          </div>
+          <div class="community-icon-content  hidden fade-right">
+            <img src="./assets/icon-06.png" alt="">
+            <p>Total Design Freedom</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Companies -->
+  <section class="companies">
+    <div class="companies-contents">
+      <h4 class="companies-title">Trusted Among Industry Leaders</h4>
+      <p class="companies-subcontent">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just
+        click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+    </div>
+    <div class="companies-images" id="companiesImages"></div>
+  </section>
+
+  <section class="testimonials">
+    <h2 class="testimonials-title">What Our Cliens Say ?</h2>
+    <div class="client-testimonials" id="clientTestimonials"></div>
+  </section>
+<!-- Get Ready -->
+  <section class="getReady">
+    <div class="getReady-content">
+      <p class="getReady-call">
+        Get Ready to Maximize Your Productivity With Our Workflow Solutions
+      </p>
+      <button class="getStarted-bnt">Let's Begin</button>
+    </div>
+    <img class="hidden fade-top" src="./assets/panel-build-orange.png" alt="">
+  </section>
+<!-- Footer -->
+  <footer class="footer hidden fade-bottom" id="contact-us">
+    <div class="footer-logo">
+      <img src="./assets/Devoit.png" alt="">
+    </div>
+    <div class="footer-contents">
+      <div class="contact">
+        <h4 class="footer-content-titles">Contact</h4>
+        <div class="contact-content">
+          <p>500 Terry Francine Street San Francisco, CA 94158</p>
+          <p><b>Sales :</b> info@mysite.com</p>
+          <p><b>General Inquiries: </b> 123-456-7890</p>
+          <p><b>Customer Care:</b> info@mysite.com</p>
+        </div>
+      </div>
+
+      <div class="follow" id="emailus">
+        <h4 class="footer-content-titles">Talk with Us.</h4>
+        <form class="email-form" action="/" id="emailFrom">
+          <label for="email"><b>Email*</b></label>
+          <input type="email" name="email" id="email" placeholder="what is your email ?" required>
+          <label for="message"><b>Message</b></label>
+          <textarea name="message" id="message" cols="30" rows="0" placeholder="Talk Here ..."></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+      <div class="quickLinks">
+        <h4 class="footer-content-titles">Quick links</h4>
+
+        <div class="links">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <!-- <a href="#">LinkedIn</a>
+          <a href="#">Youtube</a>
+          <a href="#">Facebook</a> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-btn">
+    <button id="scrollToTopBtn">Up</button>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="WeOffer-Cards.js"></script>
+  <script src="Testimonial-Cards.js"></script>
+  <script src="Companies-logs.js"></script>
+  <script src="Footer.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).on('scroll', function () {
+        $('.hidden').each(function () {
+          if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+            $(this).addClass('visible');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

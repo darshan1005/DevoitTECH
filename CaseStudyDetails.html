@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/Devoit.png" type="image/png">
+    <link rel="stylesheet" href="CaseStudyDetails.css">
+    <title>Case Study Details</title>
+</head>
+<body>
+    <div id="case-study-details">
+        <!-- Case study details will be populated here using JavaScript -->
+    </div>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const caseStudyId = urlParams.get('id');
+            const caseStudyDetails = getCaseStudyDetailsById(caseStudyId);
+
+            const caseStudyDetailsContainer = document.getElementById('case-study-details');
+            if (caseStudyDetails) {
+                caseStudyDetailsContainer.innerHTML = `
+                    <button onclick="window.location.href = 'caseStudies.html'">Back</button>
+                    <h2>${caseStudyDetails.title}</h2>
+                    <hr>
+                    <p>${caseStudyDetails.description}</p>
+                `;
+            } else {
+                caseStudyDetailsContainer.innerHTML = `
+                    <button onclick="window.location.href = 'caseStudies.html'">Back</button>
+                    <h2>Case Study Not Found</h2>
+                    <hr>
+                    <p>Case study was under progress.....</p>
+                `;
+            }
+        };
+
+        function getCaseStudyDetailsById(caseStudyId) {
+            const caseStudies = {
+                1: { title: 'Case Study 1 Title', description: 'Full details of Case Study 1...' },
+                2: { title: 'Case Study 2 Title', description: 'Full details of Case Study 2...' },
+                3: { title: 'Case Study 3 Title', description: 'Full details of Case Study 3...' },
+                4: { title: 'Case Study 4 Title', description: 'Full details of Case Study 4...' },
+                5: { title: 'Case Study 5 Title', description: 'Full details of Case Study 5...' },
+                6: { title: 'Case Study 6 Title', description: 'Full details of Case Study 6...' },
+                7: { title: 'Case Study 7 Title', description: 'Full details of Case Study 7...' },
+                8: { title: 'Case Study 8 Title', description: 'Full details of Case Study 8...' },
+            };
+
+            return caseStudies[caseStudyId];
+        }
+    </script>
+</body>
+</html>
