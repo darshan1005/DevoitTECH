@@ -1,3 +1,10 @@
+html{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Logo */
 #nav{
   position: sticky;
@@ -947,6 +954,14 @@ textarea::placeholder {
     margin-bottom: 1rem;
     font-size: large;
   }
+
+  /* Floating button */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 }
 
 @media (max-width: 426px) and (min-width: 320px){
@@ -1112,7 +1127,6 @@ textarea::placeholder {
 }
 
 /* getready */
-
 .getReady-call{
   width: 90%;
 }
@@ -1125,16 +1139,15 @@ textarea::placeholder {
 .getReady img{
   width: 100%;
 }
-  /* Footer */
-  .footer-contents{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 2rem;
-  }
-
-  .contact{
-    width: 90%;
-  }
+/* Footer */
+.footer-contents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+.contact{
+  width: 90%;
+}
 }
