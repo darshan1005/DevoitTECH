@@ -42,6 +42,7 @@ html{
   justify-content: space-evenly;
   align-items: center;
   height: 600px;
+  width: 100%;
 }
 
 .hero-left {
@@ -49,15 +50,17 @@ html{
   flex-direction: column;
   padding: 80px;
   gap: 4rem;
+  width: max-content;
 }
 
 .hero-left-title {
   font-size: 50px;
   width: 70%;
+  max-width: 75%;
 }
 
 .hero-left-subtitle {
-  width: 60%;
+  width: 70%;
 }
 
 .hero-left-btn {
@@ -76,7 +79,7 @@ html{
 .icon-content-flex {
   display: flex;
   flex-direction: row;
-  gap: 6rem;
+  gap: 4rem;
 }
 
 .icon-content {
@@ -93,7 +96,7 @@ html{
 .hero-right {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   height: 550px;
 }
 
@@ -114,7 +117,7 @@ html{
 }
 
 .about-title {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 600;
   margin-top: 6rem;
 }
@@ -124,20 +127,23 @@ html{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  text-align: center;
+  width: 55%;
 }
 
 .content-one {
-  font-size: x-large;
+  font-size: large;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.788);
+  max-width: 85%;
+  min-width: 80%;
 }
 
 .content-two {
-  width: 85%;
+  width: 90%;
 }
 
-/* weoffer */
+/* weOffer */
 .weOffer {
   padding: 120px;
   display: flex;
@@ -146,37 +152,50 @@ html{
 }
 
 .weOffer-head-subtitle {
-  width: 40%;
+  width: 100%;
 }
 
-.weOffer-cards {
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  width: 100%;
+}
+
+.carousel-track {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 2rem;
-  padding: 1rem;
+  transition: transform 0.4s ease-in-out;
 }
 
 .cards-content {
   flex: 0 0 auto;
+  width: 280px; 
+  margin-right: 20px; 
+  box-sizing: border-box;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  scroll-snap-align: start;
+  align-items: center;
+  gap: 1rem;
 }
 
 .cards-content img {
   margin: 0 auto;
   border-radius: 7px;
   border: 2px solid black;
-  width: 250px;
+  width: 100%;
 }
 
 .title-contents {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  width: 250px;
+  width: 100%;
 }
 
 .title-contents .card-title {
@@ -184,8 +203,29 @@ html{
   font-weight: 600;
 }
 
-.title-contents .card-subcontent {
-  color: rgba(0, 0, 0, 0.76);
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left-button {
+  left: 10px;
+}
+
+.right-button {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* community */
@@ -216,64 +256,14 @@ html{
 }
 
 .community-guide-description {
-  width: 74%;
-}
-
-.community-guide-icons {
-  display: flex;
-}
-
-.community-icon-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.community-icon-content p {
-  width: 50%;
-  margin-top: 1rem;
-}
-
-/* getReady */
-.getReady {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.getReady-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.getReady-call {
-  font-size: xx-large;
-  font-weight: 600;
-  width: 60%;
-  text-align: center;
-}
-
-.getReady img {
-  width: 60%;
-  mix-blend-mode: multiply;
-}
-
-.getStarted-bnt {
-  width: max-content;
-  padding: 10px 30px;
-  background: black;
-  color: white;
-  border-radius: 5px;
+  width: 90%;
 }
 
 /* Trusted Companies */
 .companies {
   background-color: #ffd7ef;
   width: 100%;
-  height: 700px;
+  height: 500px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -314,39 +304,59 @@ html{
   gap: 4rem;
 }
 
-.client-testimonials {
+.testimonials-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonials-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonials-carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonials-carousel-track {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 20px;
-  scroll-snap-type: x mandatory;
+  transition: transform 0.4s ease-in-out;
 }
 
 .cards-testimonials {
   border: 2px solid black;
   border-radius: 1rem;
   width: 300px;
+  height: 450px;
   flex: 0 0 auto;
-  scroll-snap-align: start;
-  margin-bottom: 3rem;
+  margin-right: 20px; 
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-head {
   background: #ffbf23;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
-  padding: 0px 0px 10px 30px;
+  padding: 10px 30px;
   font-weight: 700;
+  text-align: left;
 }
 
 .card-testimonial-content {
-  margin: 0 auto;
   padding: 20px;
-  width: 70%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-footer {
@@ -355,12 +365,11 @@ html{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .sea-plants {
-  width: 50%;
-  margin-left: -3rem;
-  margin-bottom: -5rem;
+  width: 35%;
 }
 
 .client-name {
@@ -368,6 +377,65 @@ html{
   width: 50%;
 }
 
+.testimonials-carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.testimonials-left-button {
+  left: 10px;
+}
+
+.testimonials-right-button {
+  right: 10px;
+}
+
+.testimonials-carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* getReady */
+.getReady {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.getReady-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.getReady-call {
+  font-size: xx-large;
+  font-weight: 600;
+  width: 60%;
+  text-align: center;
+}
+
+.getReady img {
+  width: 60%;
+  mix-blend-mode: multiply;
+}
+
+.getStarted-bnt {
+  width: max-content;
+  padding: 10px 30px;
+  background: black;
+  color: white;
+  border-radius: 5px;
+}
 
 /* footer */
 .footer {
@@ -543,7 +611,7 @@ textarea::placeholder {
   .hero-right {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     height: 475px;
   }
 
@@ -554,6 +622,7 @@ textarea::placeholder {
   /* about */
   .about-title {
     font-size: 35px;
+    margin-top: -5px;
   }
 
   .about-section-contents {
@@ -561,16 +630,17 @@ textarea::placeholder {
   }
 
   .content-two {
-    width: 85%;
+    width: 90%;
   }
 
   /* weoffer */
   .weOffer {
-    gap: 3rem;
+    gap: 1rem;
+    padding: 50px;
   }
 
   .weOffer-head-subtitle {
-    width: 45%;
+    text-align: justify;
   }
 
   .weOffer-cards {
@@ -580,16 +650,18 @@ textarea::placeholder {
   }
 
   .cards-content {
-    gap: 2rem;
+    gap: 1rem;
+    align-items: center;
   }
 
   .cards-content img {
-    width: 200px;
+    width: 300px;
   }
 
   .title-contents {
     gap: 0.7rem;
-    width: 200px;
+    width: 300px;
+    font-size: 20px;
   }
 
   /* community */
@@ -619,22 +691,9 @@ textarea::placeholder {
     width: 100%;
   }
 
-  .community-icon-content img {
-    width: 40px;
-  }
-
-  .community-icon-content {
-    gap: 0.5rem;
-  }
-
-  .community-icon-content p {
-    width: 70%;
-    font-size: smaller;
-  }
-
   /* Trusted Companies */
   .companies {
-    height: 600px;
+    height: 400px;
     gap: 2rem;
   }
 
@@ -642,7 +701,7 @@ textarea::placeholder {
     align-items: center;
     gap: 0.9rem;
   }
-
+  
   .companies-contents .companies-title {
     font-size: 35px;
   }
@@ -654,6 +713,7 @@ textarea::placeholder {
 
   .companies-images {
     grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
   }
 
   .companies-images img {
@@ -729,7 +789,6 @@ textarea::placeholder {
 
   .hero-left-title {
     font-size: 30px;
-    width: 100%;
   }
 
   .hero-left-subtitle {
@@ -787,28 +846,30 @@ textarea::placeholder {
 
   /* weoffer */
   .weOffer {
-    padding: 50px;
+    padding: 20px;
     gap: 1rem;
   }
 
   .weOffer-head-subtitle {
-    width: 70%;
+    width: 100%;
   }
 
   .cards-content {
-    gap: 2rem;
+    margin-left: 5px; 
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .cards-content img {
-    width: 200px;
+    width: 270px;
   }
 
   .title-contents {
-    width: 200px;
-  }
-
-  .title-contents .card-subcontent {
-    font-size: 13px;
+    width: 270px;
   }
 
   /* community */
@@ -839,13 +900,9 @@ textarea::placeholder {
     width: 80%;
   }
 
-  .community-icon-content p {
-    width: 60%;
-  }
-
   /* Trusted Companies */
   .companies {
-    height: 500px;
+    height: 400px;
     gap: 2rem;
   }
 
@@ -885,16 +942,17 @@ textarea::placeholder {
   .card-testimonial-content {
     width: 80%;
     font-size: small;
+    display: flex;
+    margin: 0 auto;
   }
 
   .cards-testimonials {
-    width: 250px;
+    width: 270px;
+    height: 400px;
   }
 
   .sea-plants {
     width: 40%;
-    margin-left: -3rem;
-    margin-bottom: -3rem;
   }
 
   .client-name {
@@ -923,7 +981,6 @@ textarea::placeholder {
   }
 
   /* footer */
-
   .footer .footer-logo img {
     width: 20rem;
   }
@@ -1027,22 +1084,26 @@ textarea::placeholder {
 }
 
 .about-content {
-  height: 500px;
+  height: 400px;
+  padding-bottom: 20px;
 }
 
 .about-title {
-  font-size: 27px;
+  font-size: clamp(27px, 2vh, 30px);
 }
 
 .about-section-contents {
-  width: 80%;
+  width: 100%;
   text-align: center;
+  padding: 10px;
+  margin-top: -15px;
 }
 
 .content-one {
   font-size: large;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.788);
+  width: 100%;
 }
 
 .content-two {
@@ -1052,6 +1113,10 @@ textarea::placeholder {
 /* weoffer */
 .weOffer-head-subtitle {
   width: 100%;
+}
+
+.weOffer-head-subtitle{
+  text-align: justify;
 }
 
 /* community */
@@ -1095,7 +1160,7 @@ textarea::placeholder {
 
 /* Trusted Companies */
 .companies {
-  height: 500px;
+  height: 350px;
   gap: 1rem;
 }
 
@@ -1123,8 +1188,43 @@ textarea::placeholder {
 }
 
 .companies-images img {
-  width: 70px;
+  width: 60px;
 }
+
+/* Testimonials */
+.testimonials {
+    padding: 40px;
+    gap: 1rem;
+  }
+
+  .cards-testimonials {
+    width: 250px;
+    height: 300px;
+    flex: 0 0 auto;
+  }
+
+  .card-testimonial-content {
+    margin: 0 auto;
+    padding: 10px;
+    font-size: small;
+  }
+
+  .card-footer {
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sea-plants {
+    width: 60px;
+  }
+
+  .client-name {
+    font-weight: 600;
+    width: 70%;
+  }
 
 /* getready */
 .getReady-call{
