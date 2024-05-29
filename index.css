@@ -461,6 +461,11 @@ html{
   padding: 40px;
 }
 
+.form-Quicklinks{
+  display: flex;
+  gap: 5rem;
+}
+
 .contact-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
