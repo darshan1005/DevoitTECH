@@ -1,5 +1,5 @@
-# [DevoitTECH](https://darshan1005.github.io/DevoitTECH/)
-# [Netlify](https://devoitconsulting.netlify.app/)
+
+# [Netlify](https://devoitconsulting.netlify.app/) | # [DevoitTECH](https://darshan1005.github.io/DevoitTECH/)
 # DevoitTECH
 
 Welcome to the official repository for DevoitTECH's landing page—a vibrant platform showcasing our commitment to effective communication, collaboration, and cutting-edge project management solutions.
